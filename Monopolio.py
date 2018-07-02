@@ -10,7 +10,7 @@ import pygame, sys, random
 pygame.init()
 
 #Inicio
-inicio = pygame.display.set_mode((1100,700))
+inicio = pygame.display.set_mode((1300,700))
 pygame.display.set_caption("MONOPOLY")
 fondo = pygame.image.load("Imagenes/fondo.jpg")
 tablero = pygame.transform.scale(pygame.image.load("Imagenes/monopolio.jpg"), (650,650))
