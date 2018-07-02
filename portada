@@ -1,7 +1,7 @@
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((1100, 700))
+screen = pygame.display.set_mode((1300, 700))
 done = False
 imagen = pygame.image.load("portada.jpg")
 
