@@ -1,0 +1,37 @@
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((1100, 700))
+done = False
+imagen = pygame.image.load("portada.jpg")
+
+
+font = pygame.font.SysFont("comicsansms", 20)
+
+text1 = font.render("INSTRUCCIONES", 0, (0, 0, 0))
+text2 = font.render("1 JUGADOR", 0, (0, 0, 0))
+text3 = font.render("2 JUGADORES", 0, (0, 0, 0))
+
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            done = True
+
+    screen.blit(imagen,(0,0))
+
+    pygame.draw.rect(screen, (255, 164, 32), pygame.Rect((400, 630, 200, 50)), 0)
+    pygame.draw.rect(screen, (255, 164, 32), pygame.Rect((630, 630, 200, 50)), 0)
+    pygame.draw.rect(screen, (255, 164, 32), pygame.Rect((860, 630, 200, 50)), 0)
+    pygame.draw.rect(screen, (0, 0, 0), ((400, 630), (200, 50)), 3)
+    pygame.draw.rect(screen, (0, 0, 0), ((630, 630), (200, 50)), 3)
+    pygame.draw.rect(screen, (0, 0, 0), ((860, 630), (200, 50)), 3)
+
+    screen.blit(text1,(415, 638))
+    screen.blit(text2,(673, 638))
+    screen.blit(text3,(890, 638))
+
+
+    pygame.display.update()
